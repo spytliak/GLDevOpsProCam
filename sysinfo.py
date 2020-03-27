@@ -71,3 +71,13 @@ cpu()
 print('system load average:', psutil.getloadavg())
 
 
+#Disks
+#psutil.disk_partitions()
+#psutil.disk_usage('/')
+print('-----Disks-----')
+for dp in psutil.disk_partitions():
+    print('device=', dp.device, 'mountpoint=', dp.mountpoint, 'fstype=', dp.fstype )
+du = psutil.disk_usage('/')
+print ('Total: %d GiB' % (du.total / (2**30)),'Used: %d GiB' % (du.used / (2**30)),'Free: %d GiB' % (du.free / (2**30)))
+
+
