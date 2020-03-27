@@ -9,8 +9,8 @@ import psutil, sys, os, time, datetime
 
 
 #Hostname
-OS = os.uname()
-print('HOSTNAME:', OS[1], 'RELEASE:', OS[2], 'VERSION:', OS[4])
+#OS = os.uname()
+#print('HOSTNAME:', OS[1], 'RELEASE:', OS[2], 'VERSION:', OS[4])
 
 
 #Uptime
@@ -67,8 +67,9 @@ def cpu():
     cpu_name = ['user', 'system', 'idle', 'iowait', 'guest',]
     for name, value in zip(cpu_name, psutil.cpu_times()):
          print('system cpu', name, value)
+    print('system load average:', psutil.getloadavg())
 cpu()
-print('system load average:', psutil.getloadavg())
+
 
 
 #Disks
