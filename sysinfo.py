@@ -9,8 +9,8 @@ import psutil, sys, os, time, datetime
 
 
 #Hostname
-#OS = os.uname()
-#print('HOSTNAME:', OS[1], 'RELEASE:', OS[2], 'VERSION:', OS[4])
+OS = os.uname()
+print('HOSTNAME:', OS[1], 'RELEASE:', OS[2], 'VERSION:', OS[4])
 
 
 #Uptime
