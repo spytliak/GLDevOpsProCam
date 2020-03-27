@@ -81,3 +81,19 @@ du = psutil.disk_usage('/')
 print ('Total: %d GiB' % (du.total / (2**30)),'Used: %d GiB' % (du.used / (2**30)),'Free: %d GiB' % (du.free / (2**30)))
 
 
+#Network
+#psutil.net_if_addrs()
+#ip = psutil.net_if_addrs()
+#print('The IP address is', ip)
+def get_ips():
+    print('----IP----')
+    ifaces = psutil.net_if_addrs()
+    ips = list()
+    for iface, info in ifaces.items():
+        if iface == 'lo':
+            continue
+        ip = info[0].address
+        ips.append(ip)
+    return ips
+print('ip:', get_ips())
+
