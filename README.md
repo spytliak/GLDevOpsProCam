@@ -1,18 +1,15 @@
-for  "GL DevOps ProCamp"
+#### for  "GL DevOps ProCamp"
 
 The script prints basic information about OS to console.
 
-
-Setup
-
+#### Setup
 docker build -t [NAME] .
 
-Usage
-
+#### Usage
 docker run [NAME]
 
-Example
-
+#### Example
+```
 root@serg:~/metrics/GLDevOpsProCam# docker run info
 HOSTNAME: e6f3f248602e RELEASE: 4.15.0-91-generic VERSION: x86_64
 Uptime: 8 days, 7 hours, 19 minutes, 05 seconds!
