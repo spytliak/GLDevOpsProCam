@@ -59,3 +59,15 @@ def mem():
 mem()
 
 
+#CPU
+#psutil.cpu_times()
+#psutil.getloadavg()
+def cpu():
+    print('----CPU----')
+    cpu_name = ['user', 'system', 'idle', 'iowait', 'guest',]
+    for name, value in zip(cpu_name, psutil.cpu_times()):
+         print('system cpu', name, value)
+cpu()
+print('system load average:', psutil.getloadavg())
+
+
